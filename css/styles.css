@@ -1,0 +1,62 @@
+.main{
+    max-width: 1440px;
+    padding: .4rem  
+}
+
+.color{
+    width: 45px;
+    height: 45px;
+    border: 0;
+    cursor: pointer;
+}
+
+.box{
+    border: 1px solid #3E7292;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option__title{
+    font-weight: bold;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.option__card{
+    margin-bottom: 30px;
+}
+
+.card__btn{
+    padding: 10px;
+    background: none;
+    cursor: pointer;
+}
+
+.code{
+    border: 1px solid #3E7292;
+}
+
+@media screen and (min-width:768px){
+    .options{
+        width: 50%;
+    }
+
+    .code{
+        width: 60%;
+    }
+
+    .card--flex{
+        display: flex;
+        width: 64%;
+        flex-wrap: wrap;
+    }
+}
