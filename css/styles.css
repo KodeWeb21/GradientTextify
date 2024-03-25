@@ -1,6 +1,11 @@
+body{
+    background-color: #1E1E1E;
+    color: white;
+}
+
 .main{
     max-width: 1440px;
-    padding: .4rem  
+    padding: .4rem;  
 }
 
 .color{
@@ -8,6 +13,7 @@
     height: 45px;
     border: 0;
     cursor: pointer;
+    background: none;
 }
 
 .box{
@@ -41,15 +47,96 @@
     cursor: pointer;
 }
 
-.code{
-    border: 1px solid #3E7292;
+.main, .card__btn{
+    color: inherit;
 }
+
+.code{
+    background-color: #333333;
+    min-height: 100px;
+    border-radius: 4px;
+    padding: .5rem;
+}
+
+.options,
+.options-right{
+    padding: .8rem;
+}
+
+.range{
+    appearance: none;
+    background-color: #B2C3CE;
+    border-radius: 10px;
+    width: 200px;
+    height: 5px;
+}
+
+
+
+/* EDITOR TEXT*/
+
+.options-right{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1;
+    align-items: center;
+}
+.canva,
+.options__gradient{
+    width: 100%;
+    height: 350px;
+    background-color: white;
+}
+
+.canva{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.canva__preview{
+   color: black;
+   top: 0;
+   left: -1px;
+   border-radius: 3px;
+   padding: .2rem;
+   border: 1px solid #B2C3CE;
+   position: absolute;
+}
+.canva__text{
+    font-size: 20px;
+    background: #DFA3CF;
+    background: radial-gradient(circle farthest-corner at center center, #740d5a 59%, #1318849b 50%, #89b400 100%);-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.box__gradient1{
+    width: 100px;
+    height: 100px;
+}
+.box__gradient1:nth-child(1){
+   background-color: red;
+}
+
 
 @media screen and (min-width:768px){
     .options{
         width: 50%;
     }
 
+    .options-right{
+        border-left: 3px solid #B2C3CE;
+    }
+    
+    .canva,
+    .options__gradient{
+    width: 80%;
+    max-width: 500px;
+    height: 350px;
+    }
     .code{
         width: 60%;
     }
@@ -58,5 +145,10 @@
         display: flex;
         width: 64%;
         flex-wrap: wrap;
+    }
+
+    .main{
+        display: flex;
+        margin: 0 auto;
     }
 }
