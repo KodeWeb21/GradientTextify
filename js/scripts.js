@@ -7,8 +7,13 @@ $options.addEventListener('click',(e)=>{
 
 $options.addEventListener('input',(e)=>{
     const target = e.target;
-    if(target.matches(".color")){
+    if(target.matches('.color')){
         const textColor = target.nextElementSibling;
         textColor.textContent = target.value;
+    }
+
+    if(target.matches('.range')){
+        const textRange = target.nextElementSibling;
+        textRange.textContent = `${target.value}%`;
     }
 })
