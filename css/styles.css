@@ -57,6 +57,12 @@ body{
     color: inherit;
 }
 
+.card__btn--active{
+    background-color: white;
+    color: black;
+}
+
+
 .code{
     background-color: #333333;
     min-height: 100px;
