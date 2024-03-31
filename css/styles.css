@@ -50,6 +50,7 @@ body{
     padding: 10px;
     background: none;
     cursor: pointer;
+    border-color: white;
 }
 
 .main, .card__btn{
