@@ -121,9 +121,9 @@ body{
 }
 .canva__text{
     font-size: 20px;
-    background: #DFA3CF;
-    background: radial-gradient(circle farthest-corner at center center, #740d5a 59%, #1318849b 50%, #89b400 100%);-webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: black;
+    font-size: 35px;
+    font-family: fantasy;
 }
 
 .box__gradient1{
@@ -164,4 +164,8 @@ body{
         display: flex;
         margin: 0 auto;
     }
+}
+
+.hide{
+    display: none;
 }

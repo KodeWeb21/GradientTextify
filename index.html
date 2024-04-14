@@ -37,20 +37,31 @@
             <div class="option__card">
                 <span class="option__title">Orientation</span>
                 <div class="card">
-                    <button class="card__btn btn-orientation" data-orientation="linear">LINEAR</button>
+                    <button class="card__btn btn-orientation card__btn--active" data-orientation="linear">LINEAR</button>
                     <button class="card__btn btn-orientation" data-orientation="radial">RADIAL</button>
                 </div>
             </div>
 
             <div class="option__card">
                 <span class="option__title">Position</span>
-                <div class="card card--flex">
-                    <button class="card__btn btn-position" data-position="top"> TOP </button>
+                <div class="card card--flex linear-options">
+                    <button class="card__btn btn-position card__btn--active" data-position="top" > TOP </button>
                     <button class="card__btn btn-position" data-position="bottom"> BOTTOM </button>
                     <button class="card__btn btn-position" data-position="left"> LEFT </button>
                     <button class="card__btn btn-position" data-position="right"> RIGHT </button>
                     <button class="card__btn btn-position" data-position="top left"> TOP LEFT </button>
                     <button class="card__btn btn-position" data-position="top right"> TOP RIGHT </button>
+                </div>
+                <div class="card card--flex radial-options hide">
+                    <button class="card__btn btn-position" data-position="top left"> TOP LEFT  </button>
+                    <button class="card__btn btn-position" data-position="top center"> TOP CENTER  </button>
+                    <button class="card__btn btn-position" data-position="top right"> TOP RIGHT </button>
+                    <button class="card__btn btn-position" data-position="left center"> LEFT CENTER </button>
+                    <button class="card__btn btn-position" data-position="center center"> CENTER CENTER </button>
+                    <button class="card__btn btn-position" data-position="right center"> RIGHT CENTER </button>
+                    <button class="card__btn btn-position" data-position="bottom left"> BOTTOM LEFT </button>
+                    <button class="card__btn btn-position" data-position="bottom center"> BOTTOM CENTER </button>
+                    <button class="card__btn btn-position" data-position="bottom right"> BOTTOM RIGHT </button>
                 </div>
             </div>
 
@@ -65,7 +76,8 @@
         <div class="options-right">
             <div class="canva">
                 <span class="canva__preview">Preview</span>
-            <span class="canva__text">CSS TEXT GRADIENT</span>
+            <span class="canva__text" style=" background: linear-gradient(to top, rgb(0, 125, 148) 20%, rgb(255, 0, 0) 99%) text; 
+            -webkit-text-fill-color: transparent;">CSS TEXT GRADIENT</span>
             </div>
             <div class="options__gradient">
                 <div class="box__gradient1">
