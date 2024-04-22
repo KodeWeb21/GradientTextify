@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/other.css">
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
     <title>GradientTextify</title>
 </head>
 <body>
@@ -68,7 +70,15 @@
             <div class="option__card">
                 <div class="code">
                     <code>
-                        backround-color: red;
+                       <div class="code__line">
+                            <span class="property">background:  <span class="property__gradient">linear-gradient(to top, rgb(0, 125, 148) 20%, rgb(255, 0, 0) 99%)</span>;</span>
+                        </div>
+                        <div class="code__line">
+                            <span class="property">background-clip: <span class="property__value">text</span>;</span>
+                        </div>
+                        <div class="code__line">
+                            <span class="property">-webkit-text-fill-color: <span class="property__value">transparent</span>;</span>
+                        </div>
                     </code>
                 </div>
             </div>
@@ -76,29 +86,51 @@
         <div class="options-right">
             <div class="canva">
                 <span class="canva__preview">Preview</span>
-            <span class="canva__text" style=" background: linear-gradient(to top, rgb(0, 125, 148) 20%, rgb(255, 0, 0) 99%) text; 
-            -webkit-text-fill-color: transparent;">CSS TEXT GRADIENT</span>
+            <span class="canva__text" style=" background: linear-gradient(to top, rgb(0, 125, 148) 20%, rgb(255, 0, 0) 99%);
+           background-clip: text;
+            -webkit-text-fill-color: transparent;" contenteditable>CSS TEXT GRADIENT</span>
             </div>
             <div class="options__gradient">
-                <div class="box__gradient1">
-                    <div class="box__color"></div>
-                    <div class="box__color"></div>
+                <div class="row-flex">
+                    <div class="box__gradient">
+                        <div class="box__color pallete1" data-color="#1C1678"></div>
+                        <div class="box__color pallete2" data-color="#8576FF"></div>
+                    </div>
+                    <div class="box__gradient">
+                        <div class="box__color pallete3" data-color="#424B54"></div>
+                        <div class="box__color pallete4" data-color="#93A8AC"></div>
+                    </div>
+                    <div class="box__gradient">
+                        <div class="box__color pallete5" data-color="#D7D9D7"></div>
+                        <div class="box__color pallete6" data-color="#C9C5CB"></div>
+                    </div>
+                    <div class="box__gradient">
+                        <div class="box__color pallete7" data-color="#CA054D"></div>
+                        <div class="box__color pallete8" data-color="#3B1C32"></div>
+                    </div>
                 </div>
-                <div class="box__gradient2">
-                    <div class="box__color"></div>
-                    <div class="box__color"></div>
-                </div>
-                <div class="box__gradient3">
-                    <div class="box__color"></div>
-                    <div class="box__color"></div>
-                </div>
-                <div class="box__gradient4">
-                    <div class="box__color"></div>
-                    <div class="box__color"></div>
+                <div class="row-flex">
+                    <div class="box__gradient">
+                        <div class="box__color pallete9" data-color="#507255"></div>
+                        <div class="box__color pallete10" data-color="#488B49"></div>
+                    </div>
+                    <div class="box__gradient">
+                        <div class="box__color pallete11" data-color="#CC5803"></div>
+                        <div class="box__color pallete12" data-color="#E2711D"></div>
+                    </div>
+                    <div class="box__gradient">
+                        <div class="box__color pallete13" data-color="#6E0D25"></div>
+                        <div class="box__color pallete14" data-color="#FFFFB3"></div>
+                    </div>
+                    <div class="box__gradient">
+                        <div class="box__color pallete15" data-color="#7B3E19"></div>
+                        <div class="box__color pallete16" data-color="#B28B84"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
     <script src="js/scripts.js"></script>
+    <script src="js/other.js"></script>
 </body>
 </html>

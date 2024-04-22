@@ -11,11 +11,10 @@ const primaryColorInput = document.querySelector('.color1');
 const secondColorInput = document.querySelector('.color2');
 const primaryRange = document.querySelector('.range1');
 const secondRange = document.querySelector('.range2');
-const code = document.querySelector('.code');
+const code = document.querySelector('.property__gradient');
 
-const showCode = () =>{
-    const styleCanva = canvaText.style.cssText;
-    code.textContent = styleCanva;
+const showCode = (styles) =>{
+    code.textContent = styles;
 }
 
 const positionActives = () =>{
@@ -28,16 +27,23 @@ const positionActives = () =>{
     }
 }
 
+const updateColorHex = (target) =>{
+    const textColor = target.nextElementSibling;
+    textColor.textContent = target.value;
+    applyStyleCss();
+}
+
 const applyStyleCss = () =>{
+    let styleCanva;
    
     if(orientationCanva === "linear"){
         canvaText.style = `
         background: #121FCF;
         background: linear-gradient(to ${position}, ${primaryColorInput.value} ${primaryRange.value}%, ${secondColorInput.value} ${secondRange.value}%);
-        -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     `;
-
+        styleCanva = `linear-gradient(to ${position}, ${primaryColorInput.value} ${primaryRange.value}%, ${secondColorInput.value} ${secondRange.value}%)`
     }
 
     if(orientationCanva === "radial"){
@@ -47,9 +53,11 @@ const applyStyleCss = () =>{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         `;
+
+        styleCanva = ` radial-gradient(circle farthest-corner at ${position}, ${primaryColorInput.value} ${primaryRange.value}%, ${secondColorInput.value} ${secondRange.value}%)`
     }
 
-    showCode();
+    showCode(styleCanva);
 }
 
 const changeStateBtn = (btnElement, prevBtn) =>{
@@ -83,9 +91,7 @@ $options.addEventListener('click',(e)=>{
 $options.addEventListener('input',(e)=>{
     const target = e.target;
     if(target.matches('.color')){
-        const textColor = target.nextElementSibling;
-        textColor.textContent = target.value;
-        applyStyleCss();
+       updateColorHex(target);
     }
 
     if(target.matches('.range')){
@@ -95,4 +101,20 @@ $options.addEventListener('input',(e)=>{
     }
 })
 
-showCode()
+canvaText.addEventListener('focusout',()=>{
+    if(canvaText.textContent.trim() === "") canvaText.textContent = "CSS TEXT GRADIENT"
+})
+
+document.body.addEventListener('click',(e)=>{
+    const target = e.target;
+    if(target.matches('.box__color')){
+        const parent = target.closest(".box__gradient");
+        const color1 = parent.children[0].dataset.color;
+        const color2 = parent.children[1].dataset.color;
+        primaryColorInput.value = color1;
+        secondColorInput.value = color2;
+        updateColorHex(primaryColorInput);
+        updateColorHex(secondColorInput)
+
+    }
+})
